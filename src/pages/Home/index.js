@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Jumbotron from '../../components/Jumbtron';
 import { Container, Row, Col } from '../../components/Grid';
 import './style.css';
+import Sidebar from '../../components/Sidebar';
 
 
 // Currently set up to use test search field component
@@ -20,6 +21,7 @@ class Home extends Component {
   render() {
     return (
     <Container fluid>
+
       <div className="row">
         <div className="col s12">
           <Jumbotron>
@@ -27,6 +29,14 @@ class Home extends Component {
           </Jumbotron>
         </div>
       </div>
+
+      <div className="row">
+        <div className="col s12">
+          <Sidebar>
+          </Sidebar>
+        </div>
+      </div>
+
     </Container>
     )
   }

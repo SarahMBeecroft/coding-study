@@ -5,6 +5,13 @@ import './style.css';
 import Sidebar from '../../components/Sidebar';
 
 
+ // Items variable for recursive sidebar
+ const items = [
+  { name: 'home', label: 'Home' },
+  { name: 'billing', label: 'Billing' },
+  { name: 'settings', label: 'Settings' },
+]
+
 // Currently set up to use test search field component
 class Home extends Component {
 
@@ -23,7 +30,7 @@ class Home extends Component {
     <Container fluid>
 
       <div className="row">
-        <div className="col s12">
+        <div className="col s12" id='paddingRemover'>
           <Jumbotron>
             <h1 className="appTitle">Study Buddy</h1>
           </Jumbotron>
@@ -31,9 +38,8 @@ class Home extends Component {
       </div>
 
       <div className="row">
-        <div className="col s12">
-          <Sidebar>
-          </Sidebar>
+        <div className="col s12" id="sidebarWidth">
+            <Sidebar items={items} />
         </div>
       </div>
 

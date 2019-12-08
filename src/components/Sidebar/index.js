@@ -8,13 +8,13 @@ function Sidebar() {
   return (
     <List disablePadding dense>
       <ListItem button>
-        <ListItemText>Library</ListItemText>
+        <ListItemText id='itemTextStyle'>Library</ListItemText>
       </ListItem>
       <ListItem button>
-        <ListItemText>In Progress</ListItemText>
+        <ListItemText id='itemTextStyle'>In Progress</ListItemText>
       </ListItem>
       <ListItem button>
-        <ListItemText>Completed</ListItemText>
+        <ListItemText id='itemTextStyle'>Completed</ListItemText>
       </ListItem>
     </List>
   );

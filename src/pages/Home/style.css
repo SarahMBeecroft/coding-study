@@ -1,0 +1,30 @@
+* {
+  font-family: 'Sulphur Point', sans-serif!important;
+  color: #82868f;
+  font-size: 25px;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  background-color: black;
+  border-radius: 0 !important;
+  border-bottom: 6px solid #82868f;
+}
+
+/* Removes padding to overwrite jumbotron defaults */
+#paddingRemover {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Styles h1 hover on jumbotron */
+h1:hover {
+  text-shadow: 2px 2px 4px #b31e7d;
+  cursor: pointer;
+}
+
+/* Sets max width on just sidebar */
+#sidebarWidth {
+  max-width: 200px;
+}
+

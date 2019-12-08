@@ -3,6 +3,7 @@ import Jumbotron from '../../components/Jumbtron';
 import { Container, Row, Col } from '../../components/Grid';
 import './style.css';
 import Sidebar from '../../components/Sidebar';
+import Footer from '../../components/Footer';
 
 
  // Items variable for recursive sidebar
@@ -40,6 +41,12 @@ class Home extends Component {
       <div className="row">
         <div className="col s12" id="sidebarWidth">
             <Sidebar items={items} />
+        </div>
+      </div>
+    
+      <div className="row">
+        <div className="col s12" id='paddingRemover'>
+            <Footer></Footer>
         </div>
       </div>
 

@@ -6,8 +6,8 @@ import Sidebar from '../../components/Sidebar';
 import Footer from '../../components/Footer';
 
 
- // Items variable for recursive sidebar
- const items = [
+// Items variable for recursive sidebar
+const items = [
   { name: 'home', label: 'Home' },
   { name: 'billing', label: 'Billing' },
   { name: 'settings', label: 'Settings' },
@@ -28,31 +28,31 @@ class Home extends Component {
   // Renders content onto main home page
   render() {
     return (
-    <Container fluid>
+      <Container fluid>
 
-      <div className="row">
-        <div className="col s12" id='paddingRemover'>
-          <Jumbotron>
-            <h1 className="appTitle">Study Buddy</h1>
-          </Jumbotron>
+        <div className="row">
+          <div className="col s12" id='paddingRemover'>
+            <Jumbotron>
+              <h1 className="appTitle">Study Buddy</h1>
+            </Jumbotron>
+          </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className="col s12" id="sidebarWidth">
+        <div className="row">
+          <div className="col s12" id="sidebarWidth">
             <Sidebar items={items} />
+          </div>
         </div>
-      </div>
-    
-      <div className="row">
-        <div className="col s12" id='paddingRemover'>
-            <Footer></Footer>
-        </div>
-      </div>
 
-    </Container>
+        <div className="row">
+          <div className="col s12" id='paddingRemover'>
+            <Footer></Footer>
+          </div>
+        </div>
+
+      </Container>
     )
   }
 }
-    
+
 export default Home;

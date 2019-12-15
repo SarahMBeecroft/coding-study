@@ -1,14 +1,13 @@
 * {
   font-family: "Sulphur Point", sans-serif !important;
-  color: #82868f;
+  color: #929292;
   font-size: 25px;
 }
 
 /* Jumbotron styling */
 .jumbotron {
-  background-color: black;
   border-radius: 0 !important;
-  border-bottom: 6px solid #82868f;
+  text-align: center!important;
 }
 
 /* Removes padding to overwrite jumbotron defaults */
@@ -17,9 +16,19 @@
   padding-right: 0;
 }
 
+h1 {
+  display: inline-block;
+  width: 400px;
+  padding: 10px;
+  color: white;
+  border: solid 4px white;
+  transition: border-width 0.1s linear;
+}
+
 /* Styles h1 hover on jumbotron */
 h1:hover {
-  text-shadow: 2px 2px 4px #b31e7d;
+  border-width: 7px;
+  border-color: white;
   cursor: pointer;
 }
 

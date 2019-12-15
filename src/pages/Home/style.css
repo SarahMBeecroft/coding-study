@@ -20,15 +20,15 @@ h1 {
   display: inline-block;
   width: 400px;
   padding: 10px;
-  color: white;
-  border: solid 4px white;
+  color: #d3f1ff;
+  border: solid 4px #d3f1ff;
   transition: border-width 0.1s linear;
 }
 
 /* Styles h1 hover on jumbotron */
 h1:hover {
   border-width: 7px;
-  border-color: white;
+  border-color: #d3f1ff;
   cursor: pointer;
 }
 

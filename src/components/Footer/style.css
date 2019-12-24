@@ -6,7 +6,7 @@ body {
 
 /* Creates a sticky footer */
 footer {
-  background-image: url(../../images/blackwaves.jpg); 
+  background-image: url(../../images/studyphoto.jpeg); 
   background-size: cover;
   position: fixed;
   left: 0;
@@ -20,5 +20,5 @@ footer {
   font-size: 18px;
   margin-top: 25px;
   color: 
-  #d3f1ff;
+  white;
 }

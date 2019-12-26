@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Jumbotron from '../../components/Jumbtron';
-import { Container, Row, Col } from '../../components/Grid';
+import { Container } from '../../components/Grid';
 import './style.css';
 import Sidebar from '../../components/Sidebar';
+import SubmitLinkForm from '../../components/SubmitLinkForm';
 import Footer from '../../components/Footer';
 
 
@@ -39,8 +40,12 @@ class Home extends Component {
         </div>
 
         <div className="row">
-          <div className="col s12" id="sidebarWidth">
+          <div className="col s4" id='sidebarWidth'>
             <Sidebar items={items} />
+          </div>
+
+          <div className="col s8">
+            <SubmitLinkForm/>
           </div>
         </div>
 

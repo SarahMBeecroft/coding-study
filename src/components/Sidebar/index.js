@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 function Sidebar() {
   return (
-    <List disablePadding dense>
+    <List>
       <ListItem button>
         <ListItemText id='itemTextStyle'>Library</ListItemText>
       </ListItem>

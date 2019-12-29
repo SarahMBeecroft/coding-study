@@ -1,4 +1,36 @@
 /* Resource Form styling */
 .resourceForm {
-  max-width: 800px;
+  max-width: 700px;
 }
+
+#optionsText {
+  color: #7a7a7a;
+  font-size: 25px;
+}
+
+.input {
+  width: 700px;
+}
+
+/* Styling for resource and submit button */
+.resourceDropdown, .submitButton {
+  height: 50px;
+  color: white;
+  background-color: #183d1e;
+}
+
+/* Hover effects for resource and submit button */
+.resourceDropdown:hover, .submitButton:hover {
+  height: 50px;
+  color: white;
+  background-color: #22662e;
+}
+
+.optionText {
+  color: white;
+}
+
+.submitButton {
+  margin-top: 15px;
+}
+

@@ -41,7 +41,7 @@ class Home extends Component {
 
         <div className="row">
           <div className="col s4" id='sidebarWidth'>
-            <Sidebar items={items} />
+            <Sidebar items={items}/>
           </div>
 
           <div className="col s8">

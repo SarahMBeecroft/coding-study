@@ -7,6 +7,7 @@ import Home from './pages/Home';
 // CSS
 import './App.css'
 
+
 function App() {
   return (
     <Router>

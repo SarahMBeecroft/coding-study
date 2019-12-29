@@ -1,17 +1,27 @@
 import React from "react";
 import "./style.css";
 
+
 function SubmitLinkForm() {
   return (
     <form className="resourceForm">
-      <p>Add your study resource here by pasting the link:</p>
-      <div className="form-group">
-        <input className="form-control" type="text" />
-      </div>
+      <label>
+        Just paste the link to the study resource below:
+        <br></br>
+        <input type="text" name="link" className="input" />
+      </label>
+      <br></br>
 
-      <div>
-        <button type="submit">Add Resource</button>
-      </div>
+      <select className='resourceDropdown'>
+        <option className='optionText'>&nbsp;Type of resource&nbsp;</option>
+        <option className='optionText'>&nbsp;Blog post&nbsp;</option>
+        <option className='optionText'>&nbsp;Course/Tutorial&nbsp;</option>
+        <option className='optionText'>&nbsp;Video&nbsp;</option>
+      </select>
+      <br></br>
+
+      <button type='submit' className='submitButton'>&nbsp;Add study resource to library&nbsp;</button>
+
     </form>
   );
 }

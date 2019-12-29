@@ -10,20 +10,22 @@
 
 .input {
   width: 700px;
+  padding: 1px 10px 1px 10px;
 }
 
 /* Styling for resource and submit button */
 .resourceDropdown, .submitButton {
   height: 50px;
   color: white;
-  background-color: #183d1e;
+  background-color: #04410b;
+  border: 5px groove #97b900;
 }
 
 /* Hover effects for resource and submit button */
 .resourceDropdown:hover, .submitButton:hover {
   height: 50px;
   color: white;
-  background-color: #22662e;
+  background-color: #00570a;
 }
 
 .optionText {

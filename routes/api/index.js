@@ -1,16 +1,7 @@
-const router = require("express").Router();
-const links = require("./links");
-// const comments = require("./comments");
+const router = require('express').Router();
+const linkRoutes = require('./links');
 
-// const beerSearch = require("./beersearch");
-// const breweryMapSearch = require("./brewerymapsearch");
-
-// DB routes
-router.use("/links", links);
-// router.use("/comments", comments);
-
-// External routes
-// router.use("/beersearch", beerSearch);
-// router.use("/brewerymapsearch", breweryMapSearch);
+// Book routes
+router.use('/links', linkRoutes);
 
 module.exports = router;

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbtron";
 import { Container } from "../../components/Grid";
 import "./style.css";
 import Sidebar from "../../components/Sidebar";
 import SubmitLinkForm from "../../components/SubmitLinkForm";
-import Footer from "../../components/Footer";
 
 // Items variable for recursive sidebar
 const items = [
@@ -28,13 +26,7 @@ class Home extends Component {
   render() {
     return (
       <Container fluid>
-        <div className="row">
-          <div className="col s12" id="paddingRemover">
-            <Jumbotron>
-              <h1 className="appTitle">Study Buddy</h1>
-            </Jumbotron>
-          </div>
-        </div>
+      
 
         <div className="row">
         
@@ -50,7 +42,7 @@ class Home extends Component {
 
         <div className="row">
           <div className="col s12" id="paddingRemover">
-            <Footer></Footer>
+     
           </div>
         </div>
       </Container>

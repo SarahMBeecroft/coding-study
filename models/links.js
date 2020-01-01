@@ -6,10 +6,10 @@ const linkSchema = new Schema({
     type: String, required: true 
   },
   title: { 
-    type: String, required: true 
+    type: String, required: false 
   },
   studyType: { 
-    type: String, required: true 
+    type: String, required: false 
   }
 });
 

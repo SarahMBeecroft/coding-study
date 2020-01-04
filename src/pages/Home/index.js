@@ -8,22 +8,22 @@ import API from "../../utils/API";
 class Home extends Component {
   // Creates state
   state = {
-    links: [],
-    type: [],
-    error: "",
-    message: ""
+    input: '',
+    linkTitle: '',
+    error: '',
+    message: ''
   };
 
   // Takes value from user input
   handleInputChange = event => {
-    this.setState({ links: event.target.value && this.state.links });
+    this.setState({ input: event.target.value });
   };
 
   handleFormSubmit = event => {
     console.log(event);
     event.preventDefault();
-    console.log(this.state.links);
-    let savedLinks = this.state.links.filter(
+    console.log(this.state.input);
+    let savedLinks = this.state.input.filter(
       link => link.id === event.target.id
     );
     savedLinks = savedLinks[0];

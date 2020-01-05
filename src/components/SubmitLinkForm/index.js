@@ -26,9 +26,10 @@ const SubmitLinkForm = props => {
       </select>
       <br></br>
 
-      <button type='submit' className='submitButton' onClick={props.handleFormSubmit}>
+      <button type='submit' className='submitButton' onClick={(event) => props.handleFormSubmit(event)}>
         &nbsp;Add study resource to library&nbsp;
       </button>
+ 
     </form>
   );
 };

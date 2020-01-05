@@ -9,6 +9,7 @@ class Home extends Component {
   // Creates state
   state = {
     input: '',
+    savedLinks: [],    
     linkTitle: '',
     error: '',
     message: ''
@@ -20,21 +21,39 @@ class Home extends Component {
   };
 
   handleFormSubmit = event => {
-    console.log(event);
+     
+    // Prevents page from reloading 
     event.preventDefault();
     console.log(this.state.input);
-    let savedLinks = this.state.input.filter(
-      link => link.id === event.target.id
-    );
+    
+    let savedLinks = this.state.input.trim();
+    console.log(savedLinks);
+
+    // Saves link to start of array
     savedLinks = savedLinks[0];
+   
+    // Saves link to database
     API.saveLink(savedLinks)
-      .then(
-        this.setState({
-          message: alert("Link saved")
-        })
-      )
-      .catch(err => console.log(err));
-  };
+    .then(this.setState(
+      {
+        message: alert('Link saved successfully!')
+      }))
+    .catch(error => console.log(error));
+    }
+
+    // API.saveLink(savedLinks)
+    
+    //   link => link.id === event.target.id
+    // );
+    // savedLinks = savedLinks[0];
+    // API.saveLink(savedLinks)
+    //   .then(
+    //     this.setState({
+    //       message: alert("Link saved")
+    //     })
+    //   )
+    //   .catch(err => console.log(err));
+  // };
 
   // Renders content onto main home page
   render() {
@@ -47,8 +66,8 @@ class Home extends Component {
 
           <div className="col s7">
             <SubmitLinkForm
-              handleFormSubmit={this.handleFormSubmit}
               handleInputChange={this.handleInputChange}
+              handleFormSubmit={this.handleFormSubmit}
             />
           </div>
         </div>
@@ -60,5 +79,6 @@ class Home extends Component {
     );
   }
 }
+
 
 export default Home;

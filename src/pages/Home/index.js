@@ -9,7 +9,7 @@ class Home extends Component {
   // Creates state
   state = {
     input: '',
-    savedLinks: [],    
+    myLinks: [],    
     linkTitle: '',
     error: '',
     message: ''
@@ -26,12 +26,15 @@ class Home extends Component {
     event.preventDefault();
     console.log(this.state.input);
     
+    // Trim removes white space before/after link 
     let savedLinks = this.state.input.trim();
     console.log(savedLinks);
+    
+    console.log('Link: ' + savedLinks + ' has been saved.');
 
-    // Saves link to start of array
-    savedLinks = savedLinks[0];
-   
+    // Sets empty link array to new array of objects 
+    this.setState({ myLinks: savedLinks, error: '' })
+    
     // Saves link to database
     API.saveLink(savedLinks)
     .then(this.setState(

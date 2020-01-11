@@ -10,6 +10,7 @@
 .jumbotron {
   border-radius: 0 !important;
   text-align: center!important;
+  border-bottom: 1px solid #7e515e;
 }
 
 /* Removes padding to overwrite jumbotron defaults */
@@ -20,17 +21,18 @@
 
 h1 {
   display: inline-block;
+  font-size: 65px;
   width: 400px;
   padding: 10px;
-  color: white;
-  border: solid 4px white;
+  color: #7e515e;
+  border: double 4px #7e515e;
   transition: border-width 0.1s linear;
 }
 
 /* Styles h1 hover on jumbotron */
 h1:hover {
-  border-width: 6px;
-  border-color: white;
+  border-width: 8px;
+  border-color: #7e515e;
   cursor: pointer;
 }
 

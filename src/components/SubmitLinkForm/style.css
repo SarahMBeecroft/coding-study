@@ -17,15 +17,15 @@
 .resourceDropdown, .submitButton {
   height: 50px;
   color: white;
-  background-color: #04410b;
-  border: 5px groove #97b900;
+  background-color: #7e515e;
+  border: 5px groove #c0a0a9;
 }
 
 /* Hover effects for resource and submit button */
 .resourceDropdown:hover, .submitButton:hover {
   height: 50px;
   color: white;
-  background-color: #00570a;
+  background-color: #7e515e;
 }
 
 .optionText {

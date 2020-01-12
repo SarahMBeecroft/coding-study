@@ -8,11 +8,10 @@ import API from "../../utils/API";
 class Home extends Component {
   // Creates state
   state = {
-    input: '',
-    myLinks: [],    
-    linkTitle: '',
-    error: '',
-    message: ''
+    input: "",
+    links: [],
+    error: "",
+    message: ""
   };
 
   // Takes value from user input
@@ -21,42 +20,27 @@ class Home extends Component {
   };
 
   handleFormSubmit = event => {
-     
-    // Prevents page from reloading 
-    event.preventDefault();
-    console.log(this.state.input);
-    
-    // Trim removes white space before/after link 
+
+    // Saves user input to a new results variable and trims white space
     let savedLinks = this.state.input.trim();
-    console.log(savedLinks);
-    
-    console.log('Link: ' + savedLinks + ' has been saved.');
+    console.log('The user typed in ' + savedLinks);
 
     // Sets empty link array to new array of objects 
-    this.setState({ myLinks: savedLinks, error: '' })
-    
-    // Saves link to database
-    API.saveLink(savedLinks)
-    .then(this.setState(
-      {
-        message: alert('Link saved successfully!')
-      }))
-    .catch(error => console.log(error));
-    }
+    this.setState({ links: savedLinks, error: '' })
 
-    // API.saveLink(savedLinks)
-    
-    //   link => link.id === event.target.id
-    // );
-    // savedLinks = savedLinks[0];
-    // API.saveLink(savedLinks)
-    //   .then(
-    //     this.setState({
-    //       message: alert("Link saved")
-    //     })
-    //   )
-    //   .catch(err => console.log(err));
-  // };
+    // Prevents page from reloading
+    event.preventDefault();
+
+    API.saveLink(savedLinks)
+      .then(this.setState(
+        {
+          message: alert('Link saved!')
+        }))
+      .catch(err => console.log(err));
+
+      console.log("Link: " + savedLinks + " has been saved.");
+
+  };
 
   // Renders content onto main home page
   render() {
@@ -69,6 +53,7 @@ class Home extends Component {
 
           <div className="col s7">
             <SubmitLinkForm
+              links={this.state.links}
               handleInputChange={this.handleInputChange}
               handleFormSubmit={this.handleFormSubmit}
             />
@@ -82,6 +67,5 @@ class Home extends Component {
     );
   }
 }
-
 
 export default Home;

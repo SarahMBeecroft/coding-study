@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Container } from '../../components/Grid';
 import './style.css';
+import API from '../../utils/API';
+import Saved from '../../components/Saved';
 
-function Library() {
-  return (
-    <Container fluid>
-      <div className='row'>
-        <div className='col s12 centerDiv' id='paddingRemover'>
-          <h2 id='libraryText'>Library</h2>
-        </div>
-      </div>
-    </Container>
-  );
+class SaveLink extends Component {
+  state = {
+    savedLinks: [],
+  };
+
+  componentDidMount() {
+    API.getLinks()
+
+      .then(res => this.setState({ savedLinks: res.data }))
+      .catch(err => console.log(err))
+  }
+
+  handleDeleteButton = id => {
+    API.deleteLink(id)
+      .then(res => this.componentDidMount())
+      .catch(err => console.log(err))
+  }
+
+  render() {
+    return (
+      <Container fluid>
+        <Container>
+          <Saved
+            savedLinks={this.state.savedLinks}
+            handleDeleteButton={this.handleDeleteButton}
+          />
+        </Container>
+      </Container>
+    );
+  }
 }
 
-export default Library;
+export default SaveLink;

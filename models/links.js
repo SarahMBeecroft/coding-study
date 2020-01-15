@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const linkSchema = new Schema({
-  link: { 
-    type: String, required: false 
+  date: {
+    type: Date, default: Date.now
   },
   title: { 
+    type: String, required: false 
+  },
+  link: { 
     type: String, required: false 
   },
   studyType: { 

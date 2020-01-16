@@ -6,50 +6,39 @@ import SubmitLinkForm from "../../components/SubmitLinkForm";
 import API from "../../utils/API";
 
 class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      input: "",
-      links: [],
-      titles: [],
-      error: "",
-      message: ""
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
+  // Creates state
+  state = {
+    links: [],
+    error: "",
+    message: "",
+    userInput: ""
+  };
 
   // Takes value from user input
   handleInputChange = event => {
-
-     // and use it to target the key on our `state` object with the same name, using bracket syntax
-     this.setState({ [event.target.name]: event.target.value });
+    // Sets input state to whatever user typed in link form field
+    this.setState({ userInput: event.target.value });
   };
 
+  // Function to handle form submit
   handleFormSubmit = event => {
-
-    let savedTitles = this.state.titles.trim();
-    console.log("The user typed in " + savedTitles);
-
-    // Saves user input to a new results variable and trims white space
-    let savedLinks = this.state.links.trim();
-    console.log("The user typed in " + savedLinks);
-
-    // Sets empty link array to new array of objects
-    this.setState({ titles: savedTitles, error: "" });
-    this.setState({ links: savedLinks, error: "" });
-
-    // Prevents page from reloading
+    // Prevents page from reloading 
     event.preventDefault();
+  
+    this.setState({ links: event.target.value, error: '' })
 
-    API.saveLink(savedLinks, savedTitles)
-      .then(
-        this.setState({
-          message: alert("Link saved!")
-        })
-      )
-      .catch(err => console.log(err));
-
-    console.log("Link: " + savedTitles + " has been saved.");
+    console.log(this.state.userInput);
+    
+    let savedLinks = this.state.userInput
+    console.log(savedLinks);
+  
+    
+    API.saveLink(savedLinks)
+    .then(this.setState(
+      {
+        message: alert('Link saved')    
+      }))
+    .catch(err => console.log(err));
   };
 
   // Renders content onto main home page

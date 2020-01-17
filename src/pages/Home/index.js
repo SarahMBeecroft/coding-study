@@ -24,15 +24,15 @@ class Home extends Component {
   handleFormSubmit = event => {
     // Prevents page from reloading 
     event.preventDefault();
-  
+    
+    // Sets state of links to user input
     this.setState({ links: event.target.value, error: '' })
-
-    console.log(this.state.userInput);
     
-    let savedLinks = this.state.userInput
-    console.log(savedLinks);
+    // Saves user input to new variable and trims it
+    let savedLinks = this.state.userInput.trim();
+    console.log('You typed in ' + savedLinks);
   
-    
+    // Saves link to MongoDB
     API.saveLink(savedLinks)
     .then(this.setState(
       {

@@ -22,23 +22,33 @@ class Home extends Component {
 
   // Function to handle form submit
   handleFormSubmit = event => {
-    // Prevents page from reloading 
+    // Prevents page from reloading
     event.preventDefault();
-    
+
     // Sets state of links to user input
-    this.setState({ links: event.target.value, error: '' })
-    
+    this.setState({ links: event.target.value, error: "" });
+
     // Saves user input to new variable and trims it
     let savedLinks = this.state.userInput.trim();
-    console.log('You typed in ' + savedLinks);
-  
+    console.log("You typed in " + savedLinks);
+
+    // Saves link to new result variable for database config
+    savedLinks = {
+      link: savedLinks
+    };
+
+    console.log(savedLinks);
+    
+    savedLinks = this.state.links.filter(link => link.id === event.target.id)
+
     // Saves link to MongoDB
     API.saveLink(savedLinks)
-    .then(this.setState(
-      {
-        message: alert('Link saved')    
-      }))
-    .catch(err => console.log(err));
+      .then(
+        this.setState({
+          message: alert("Link saved")
+        })
+      )
+      .catch(err => console.log(err));
   };
 
   // Renders content onto main home page

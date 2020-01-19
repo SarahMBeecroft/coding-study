@@ -31,14 +31,14 @@ const SubmitLinkForm = props => {
         />
       </label>
       <br></br>
-      {/* 
+      
       <select className='resourceDropdown'>
         <option className='optionText'>&nbsp;Type of resource&nbsp;</option>
         <option className='optionText' value='blog'>&nbsp;Blog post&nbsp;</option>
         <option className='optionText' value='course'>&nbsp;Course/Tutorial&nbsp;</option>
         <option className='optionText' value='video'>&nbsp;Video&nbsp;</option>
       </select>
-      <br></br> */}
+      <br></br>
 
       <button
         type="submit"

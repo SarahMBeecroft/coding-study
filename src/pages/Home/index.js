@@ -16,15 +16,15 @@ class Home extends Component {
     titleInput: ""
   };
 
-  // Takes value from user input for title 
+  // Takes value from user input for title
   handleInputChange = event => {
-    // Sets input state to whatever user typed in title field 
+    // Sets input state to whatever user typed in title field
     this.setState({ titleInput: event.target.value });
   };
 
   // Takes value from user input for link
   handleInputChange2 = event => {
-    // Sets input state to whatever user typed in link field 
+    // Sets input state to whatever user typed in link field
     this.setState({ linkInput: event.target.value });
   };
 

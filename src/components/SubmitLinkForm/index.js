@@ -4,30 +4,30 @@ import "./style.css";
 const SubmitLinkForm = props => {
   return (
     <form className="resourceForm">
-      {/* 
+      
     <label>
-        Just paste the title here:
+        Paste the title here:
         <br></br>
         <input
           className='form-control input'
-          value={props.search}
+          value={props.titleInput}
           type='text'
           name='title'
           placeholder='Example: 15 CSS tricks to make your life easier'
           onChange={props.handleInputChange}
         />
-      </label> */}
+      </label>
 
       <label>
-        Just paste the link to the study resource below:
+        Paste the link to the study resource below:
         <br></br>
         <input
           className="form-control input"
-          value={props.userInput}
+          value={props.linkInput}
           type="text"
           name="link"
           placeholder="Paste link url here"
-          onChange={props.handleInputChange}
+          onChange={props.handleInputChange2}
         />
       </label>
       <br></br>

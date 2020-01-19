@@ -26,7 +26,7 @@ const SubmitLinkForm = props => {
           value={props.linkInput}
           type="text"
           name="link"
-          placeholder="Paste link url here"
+          placeholder="Paste link here"
           onChange={props.handleInputChange2}
         />
       </label>

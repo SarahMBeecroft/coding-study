@@ -25,7 +25,7 @@ label {
 .resourceDropdown:hover, .submitButton:hover {
   height: 50px;
   color: white;
-  background-color: #c0a0a9;
+  background-color: hsl(342, 28%, 57%);
 }
 
 .optionText {

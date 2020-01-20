@@ -6,7 +6,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 function Sidebar() {
   return (
-    <List>
+    <List className="menuButtons">
       <ListItem button className='buttonEffect'>
         <ListItemText id="itemTextStyle">Library</ListItemText>
       </ListItem>

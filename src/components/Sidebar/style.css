@@ -29,9 +29,13 @@
   }
 }
 
+.menuButtons {
+  margin-top: 40px!important;
+}
+
 /* Adds space in between menu buttons */
 #itemTextStyle {
-  margin-top: 30px!important;
+  margin-top: 20px!important;
 }
 
 /* modifiers */

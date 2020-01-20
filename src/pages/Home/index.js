@@ -10,10 +10,12 @@ class Home extends Component {
   state = {
     links: [],
     titles: [],
+    types: [],
     error: "",
     message: "",
     linkInput: "",
-    titleInput: ""
+    titleInput: "",
+    typeInput: ""
   };
 
   // Takes value from user input for title
@@ -28,6 +30,12 @@ class Home extends Component {
     this.setState({ linkInput: event.target.value });
   };
 
+   // Takes value from user input for type
+   handleInputChange3 = event => {
+    // Sets input state to whatever user selected from type field 
+    this.setState({ typeInput: event.target.value });
+  };
+
   // Function to handle form submit
   handleFormSubmit = event => {
     // Prevents page from reloading
@@ -39,21 +47,27 @@ class Home extends Component {
     // Sets state of titles to user input
     this.setState({ titles: event.target.value, error: "" });
 
-    // Saves user input to new variable and trims it
-    let savedLinks = this.state.linkInput.trim();
-    console.log("You typed in " + savedLinks);
+    // Sets state of types to user selection
+    this.setState({ types: event.target.value, error: "" });
 
     // Saves user input to new variable and trims it
     let savedTitles = this.state.titleInput.trim();
-    console.log("You typed in " + savedTitles);
+    console.log("Link title: " + savedTitles);
+
+    // Saves user input to new variable and trims it
+    let savedLinks = this.state.linkInput.trim();
+    console.log("URL: " + savedLinks);
+
+    // Saves user input to new variable and trims it
+    let savedTypes = this.state.typeInput;
+    console.log("Type of resource: " + savedTypes);
 
     // Saves link to new object variable for database config
     savedLinks = {
       link: savedLinks,
-      title: savedTitles
+      title: savedTitles,
+      studyType: savedTypes
     };
-
-    console.log(savedLinks.link);
 
     // Saves link to MongoDB
     API.saveLink(savedLinks)
@@ -74,7 +88,7 @@ class Home extends Component {
             <Sidebar />
           </div>
 
-          <div className="col s7">
+          <div className="col s5">
             <SubmitLinkForm
               links={this.state.links}
               titles={this.state.titles}
@@ -82,6 +96,9 @@ class Home extends Component {
               handleInputChange2={this.handleInputChange2}
               handleFormSubmit={this.handleFormSubmit}
             />
+          </div>
+          <div className="col s2">
+          {/* <TrackingProgress></TrackingProgress> */}
           </div>
         </div>
 

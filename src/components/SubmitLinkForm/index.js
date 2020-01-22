@@ -34,9 +34,9 @@ const SubmitLinkForm = props => {
     
       <select value={props.typeInput} onChange={props.handleInputChange3} className='resourceDropdown'>
         <option className='optionText'>&nbsp;Type of resource&nbsp;</option>
-        <option className='optionText' value='blog'>&nbsp;Blog post&nbsp;</option>
-        <option className='optionText' value='course'>&nbsp;Course/Tutorial&nbsp;</option>
-        <option className='optionText' value='video'>&nbsp;Video&nbsp;</option>
+        <option value='blog' className='optionText'>&nbsp;Blog post&nbsp;</option>
+        <option value='course' className='optionText'>&nbsp;Course/Tutorial&nbsp;</option>
+        <option value='video' className='optionText'>&nbsp;Video&nbsp;</option>
       </select>
       <br></br>
 

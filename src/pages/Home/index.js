@@ -92,8 +92,10 @@ class Home extends Component {
             <SubmitLinkForm
               links={this.state.links}
               titles={this.state.titles}
+              types={this.state.types}
               handleInputChange={this.handleInputChange}
               handleInputChange2={this.handleInputChange2}
+              handleInputChange3={this.handleInputChange3}
               handleFormSubmit={this.handleFormSubmit}
             />
           </div>

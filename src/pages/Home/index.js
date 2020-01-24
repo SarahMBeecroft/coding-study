@@ -30,9 +30,9 @@ class Home extends Component {
     this.setState({ linkInput: event.target.value });
   };
 
-   // Takes value from user input for type
-   handleInputChange3 = event => {
-    // Sets input state to whatever user selected from type field 
+  // Takes value from user input for type
+  handleInputChange3 = event => {
+    // Sets input state to whatever user selected from type field
     this.setState({ typeInput: event.target.value });
   };
 
@@ -78,9 +78,9 @@ class Home extends Component {
       )
       .catch(err => console.log(err));
 
-      // Clears search form fields after hitting submit
-      document.getElementById('input1').value='';
-      document.getElementById('input2').value='';
+    // Clears search form fields after hitting submit
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
   };
 
   // Renders content onto main home page
@@ -104,7 +104,7 @@ class Home extends Component {
             />
           </div>
           <div className="col s2">
-          {/* <TrackingProgress></TrackingProgress> */}
+            {/* <TrackingProgress></TrackingProgress> */}
           </div>
         </div>
 

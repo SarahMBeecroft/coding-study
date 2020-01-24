@@ -73,10 +73,14 @@ class Home extends Component {
     API.saveLink(savedLinks)
       .then(
         this.setState({
-          message: alert("Link saved")
+          message: alert("Link saved to database!")
         })
       )
       .catch(err => console.log(err));
+
+      // Clears search form fields after hitting submit
+      document.getElementById('input1').value='';
+      document.getElementById('input2').value='';
   };
 
   // Renders content onto main home page

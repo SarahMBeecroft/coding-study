@@ -10,6 +10,7 @@ const SubmitLinkForm = props => {
         <br></br>
         <input
           className='form-control input'
+          id='input1'
           value={props.titleInput}
           type='text'
           name='title'
@@ -23,6 +24,7 @@ const SubmitLinkForm = props => {
         <br></br>
         <input
           className="form-control input"
+          id='input2'
           value={props.linkInput}
           type="text"
           name="link"

@@ -38,8 +38,6 @@ h1 {
 /* Styles h1 hover on jumbotron */
 h1:hover {
   border-width: 8px;
-  color:  hsl(342, 28%, 57%);
-  border-color: hsl(342, 28%, 57%);
   cursor: pointer;
 }
 

@@ -2,14 +2,24 @@
   background-color: white;
 }
 
-.saved-list {
-  background-color: white;
+.linkTitle {
+  color: #4d4d4d;
+  font-size: 35px;
 }
 
 .deleteLink {
   margin-left: 10px
 }
 
-.viewLink {
-  margin-left: 10px
+.viewLink, .deleteBtn {
+  margin-left: 10px;
+  height: 50px;
+  color: white;
+  background-color: #7e515e;
+  border: 5px groove white;
+}
+
+.viewLink:hover, .deleteBtn:hover {
+  height: 50px;
+  background-color: hsl(342, 28%, 57%);
 }

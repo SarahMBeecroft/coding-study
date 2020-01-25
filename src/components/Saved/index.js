@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css";
 import { Row, Col } from "../Grid";
-import img1 from "../../images/course.png";
+import img1 from "../../images/course.jpg";
+import img2 from "../../images/garbagecan.png";
 
 const DisplayLinks = props => {
   return props.savedLinks.length === 0 ? (
@@ -15,37 +16,47 @@ const DisplayLinks = props => {
   ) : (
     <div className="card-body player">
       <div className="article">
-        <h3>Saved Links:</h3>
+        <h3>My Library</h3>
         {props.savedLinks.map(savedLink => {
           return (
             <li className="list-group-item" key={savedLink._id}>
               <Row id={savedLink.title + "Card"} key={savedLink._id}>
-                <Col size="1" className="emptyCol" />
-                <Col size="9" className="linkInfo">
+                <Col size="12" className="linkInfo">
                   <Row>
-                    <img src={img1} alt={"person studying"}/>
+                    <img
+                      className="savedImage"
+                      src={img1}
+                      alt={"person studying"}
+                    />
                   </Row>
                   <Row>
-                    <h2 className="linkTitle">{savedLink.title}</h2>
+                    <p className="linkTitle">{savedLink.title}</p>
                   </Row>
                 </Col>
               </Row>
-              <br></br>
-              <Row className="buttonDiv">
+              <Row>
                 <button
                   className="deleteBtn"
                   id={savedLink._id}
                   onClick={() => props.handleDeleteButton(savedLink._id)}
                 >
-                  Delete
+                  Add to your "In Progress"
                 </button>
+
                 <a
                   href={savedLink.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="viewLink">Go to study resource</button>
+                  <button className="viewLink">Go to website</button>
                 </a>
+                <img
+                      src={img2}
+                      alt={"delete"}
+                      id={savedLink._id}
+                      onClick={() => props.handleDeleteButton(savedLink._id)}
+                      className="deleteImage"
+                    />
               </Row>
             </li>
           );

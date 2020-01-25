@@ -1,10 +1,30 @@
+* {
+  border-radius: 0px!important;
+}
+
 .card {
   background-color: white;
+  max-width: 450px;
+}
+
+.card-body {
+  max-width: 400px;
+  display: inline-block;
+  text-align: center;
+}
+
+.savedImage {
+  width: 300px;
+}
+
+h3 {
+  color: #4d4d4d;
+  font-size: 35px;
 }
 
 .linkTitle {
   color: #4d4d4d;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .deleteLink {
@@ -17,9 +37,20 @@
   color: white;
   background-color: #7e515e;
   border: 5px groove white;
+  padding: 3px 6px 3px 6px;
+}
+
+.viewLink {
+  margin-top: 5px;
 }
 
 .viewLink:hover, .deleteBtn:hover {
   height: 50px;
   background-color: hsl(342, 28%, 57%);
+}
+
+.deleteImage {
+  width: 30px;
+  height: 30px;
+  margin: 20px 0px 0px 82px;
 }

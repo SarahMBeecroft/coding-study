@@ -20,7 +20,7 @@ function App() {
         <div className="row">
           <div className="col s12" id="paddingRemover">
             <Jumbotron>
-              <h1 className="appTitle">Study Buddy</h1>
+              <a href="home"><h1 className="appTitle">Study Buddy</h1></a>
             </Jumbotron>
           </div>
         </div>

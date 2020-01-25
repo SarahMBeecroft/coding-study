@@ -5,6 +5,11 @@
   word-spacing: -3px; /* Decreases space between words */
 }
 
+/* Removes underline on link during hover/click */
+a:hover {
+  text-decoration: none;
+}
+
 /* Jumbotron styling */
 .jumbotron {
   border-radius: 0 !important;

@@ -8,7 +8,7 @@ function Sidebar() {
   return (
     <List className="menuButtons">
       <ListItem button className='buttonEffect'>
-        <ListItemText id="itemTextStyle">Library</ListItemText>
+        <a href="library"><ListItemText id="itemTextStyle">Library</ListItemText></a>
       </ListItem>
       <ListItem button className='buttonEffect'>
         <ListItemText id="itemTextStyle">In Progress</ListItemText>

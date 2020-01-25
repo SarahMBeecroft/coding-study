@@ -47,8 +47,8 @@ const DisplayLinks = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="viewBook btn btn-success">
-                    View Book
+                  <button className="viewLink btn btn-success">
+                    Go to study resource
                   </button>
                 </a>
               </Row>

@@ -16,8 +16,8 @@ class SaveLink extends Component {
       .catch(err => console.log(err));
   }
 
-  handleDeleteButton = id => {
-    API.deleteLink(id)
+  handleDeleteButton = _id => {
+    API.deleteLink(_id)
       .then(res => this.componentDidMount())
       .catch(err => console.log(err));
   };

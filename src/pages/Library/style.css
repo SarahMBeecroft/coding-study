@@ -1,5 +1,5 @@
 .container {
-  height: 3000px;
+  height: 2000px;
 }
 
 .centerDiv {
@@ -11,3 +11,11 @@
   display: inline-block;
   color: #4d4d4d;
 }
+
+/* Grid CSS */
+.grid-container {
+  display: grid;
+  grid-gap: 20px;  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+

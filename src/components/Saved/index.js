@@ -14,11 +14,12 @@ const DisplayLinks = props => {
       </div>
     </div>
   ) : (
-    <div className="card-body player">
-      <div className="article">
+    <div className="card-body">
         <h3>My Library</h3>
+      <div className="grid-container">
         {props.savedLinks.map(savedLink => {
           return (
+              <div>
             <li className="list-group-item" key={savedLink._id}>
               <Row id={savedLink.title + "Card"} key={savedLink._id}>
                 <Col size="12" className="linkInfo">
@@ -51,14 +52,15 @@ const DisplayLinks = props => {
                   <button className="viewLink">Go to website</button>
                 </a>
                 <img
-                      src={img2}
-                      alt={"delete"}
-                      id={savedLink._id}
-                      onClick={() => props.handleDeleteButton(savedLink._id)}
-                      className="deleteImage"
-                    />
+                  src={img2}
+                  alt={"delete"}
+                  id={savedLink._id}
+                  onClick={() => props.handleDeleteButton(savedLink._id)}
+                  className="deleteImage"
+                />
               </Row>
             </li>
+            </div>
           );
         })}
       </div>

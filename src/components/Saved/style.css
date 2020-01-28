@@ -67,3 +67,13 @@ h3 {
   filter: alpha(opacity=60); /* For IE8 and earlier */
   transform: scale(1.05);
 }
+
+
+/* Grid CSS */
+.grid-container {
+  display: grid!important;
+  grid-gap: 20px!important;  
+  grid-template-columns: 1fr 1fr 1fr 1fr!important;
+}
+
+

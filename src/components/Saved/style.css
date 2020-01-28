@@ -31,32 +31,39 @@ h3 {
   margin-left: 10px
 }
 
-.viewLink, .deleteBtn {
+.inProgressBtn {
+  margin-bottom: 10px;
+}
+
+.viewLink, .inProgressBtn {
   margin-left: 10px;
   height: 50px;
   color: white;
   font-size: 24px;
-  background-image: linear-gradient(to right, #7e515e , #be909d);
+  background-image: linear-gradient(to right, #7e515e , #bb8796);
   padding: 6px 12px 6px 12px!important;
   border: none!important;
   border-radius: 2px!important;
+  transition: all .2s ease-in-out;
 }
 
 .viewLink {
   margin-top: 5px;
 }
 
-.viewLink:hover, .deleteBtn:hover {
-  height: 55px;
+.viewLink:hover, .inProgressBtn:hover {
+  transform: scale(1.05);
 }
 
 .deleteImage {
   width: 30px;
   height: 30px;
   margin: 20px 0px 0px 82px;
+  transition: all .2s ease-in-out;
 }
 
 .deleteImage:hover {
   opacity: 0.6;
   filter: alpha(opacity=60); /* For IE8 and earlier */
+  transform: scale(1.05);
 }

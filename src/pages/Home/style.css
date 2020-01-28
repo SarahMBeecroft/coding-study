@@ -29,7 +29,7 @@ h1 {
   font-size: 65px;
   width: 400px;
   padding: 10px;
-  color: #7e515e;
+  color: #7e515e; 
   border: double 4px #7e515e;
   transition: border-width 0.1s linear;
   text-shadow: 3px 3px 6px #eecfba;

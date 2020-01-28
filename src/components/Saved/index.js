@@ -36,7 +36,7 @@ const DisplayLinks = props => {
               </Row>
               <Row>
                 <button
-                  className="deleteBtn"
+                  className="inProgressBtn"
                   id={savedLink._id}
                   onClick={() => props.handleDeleteButton(savedLink._id)}
                 >

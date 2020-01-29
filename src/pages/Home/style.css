@@ -1,5 +1,5 @@
 * {
-  font-family: "Sulphur Point", sans-serif !important;
+  font-family: 'Sulphur Point', sans-serif!important;
   color: #4d4d4d;
   font-size: 25px;
   word-spacing: -3px; /* Decreases space between words */
@@ -24,28 +24,6 @@ a:hover {
   padding-right: 0;
 }
 
-h1 {
-  display: inline-block;
-  font-size: 65px;
-  width: 400px;
-  padding: 10px;
-  color: #7e515e; 
-  border: double 4px #7e515e;
-  transition: border-width 0.1s linear;
-  text-shadow: 3px 3px 6px #eecfba;
-}
-
-/* Styles h1 hover on jumbotron */
-h1:hover {
-  border-width: 8px;
-  cursor: pointer;
-}
-
-/* Sets max width on just sidebar */
-#sidebarWidth {
-  max-width: 350px;
-  margin-left: 40px;
-}
 
 
 /* Footer Styling */

@@ -19,9 +19,7 @@ function App() {
       <div>
         <div className="row">
           <div className="col s12" id="paddingRemover">
-            <Jumbotron>
-              <a href="home"><h1 className="appTitle">Study Buddy</h1></a>
-            </Jumbotron>
+            <Jumbotron></Jumbotron>
           </div>
         </div>
         <Switch>

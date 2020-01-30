@@ -4,6 +4,7 @@ import Wrapper from "../../components/Wrapper";
 import "./style.css";
 import API from "../../utils/API";
 import Saved from "../../components/Saved";
+import Navbar from "../../components/Navbar";
 
 class SaveLink extends Component {
   state = {
@@ -25,20 +26,17 @@ class SaveLink extends Component {
 
   render() {
     return (
-     
-   
-         <Container fluid>
-           <Container>
-           <Wrapper>
-        <Saved
-          savedLinks={this.state.savedLinks}
-          handleDeleteButton={this.handleDeleteButton}
-        />
-            </Wrapper>
+      <Container fluid>
+        <Container>
+          <Navbar></Navbar>
+          <Wrapper>
+            <Saved
+              savedLinks={this.state.savedLinks}
+              handleDeleteButton={this.handleDeleteButton}
+            />
+          </Wrapper>
         </Container>
-           </Container>
-  
-   
+      </Container>
     );
   }
 }

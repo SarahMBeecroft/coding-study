@@ -1,0 +1,22 @@
+/* Styles active nav link */
+#activeNav {
+  color: #7e515e!important;
+  text-decoration: underline;
+  }
+  
+  .nav-link {
+    transition: all .2s ease-in-out;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.05);
+  }
+  
+  #centerNav {
+    text-align: center!important;
+  }
+  
+  nav {
+    display: inline-block!important;
+    margin: -10px 0px -10px 0px;
+  }

@@ -10,16 +10,17 @@
 .card-body {
   max-width: 400px;
   display: inline-block;
-  text-align: center;
+  text-align: center!important;
 }
 
 .savedImage {
   width: 300px;
 }
 
-h3 {
+h2 {
   color: #4d4d4d;
-  font-size: 35px;
+  font-size: 45px;
+  display: inline-block!important;
 }
 
 .linkTitle {
@@ -74,6 +75,7 @@ h3 {
   display: grid!important;
   grid-gap: 20px!important;  
   grid-template-columns: 1fr 1fr 1fr 1fr!important;
+  text-align: center!important;
 }
 
 

@@ -23,11 +23,17 @@ const DisplayLinks = props => {
                 <Row id={savedLink.title + "Card"} key={savedLink._id}>
                   <Col size="12" className="linkInfo">
                     <Row>
-                      <img
-                        className="savedImage"
-                        src={img1}
-                        alt={"person studying"}
-                      />
+                      <a
+                        href={savedLink.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="savedImage"
+                          src={img1}
+                          alt={"person studying"}
+                        />
+                      </a>
                     </Row>
                     <Row>
                       <p className="linkTitle">{savedLink.title}</p>

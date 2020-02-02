@@ -5,7 +5,7 @@
 }
 
 .input {
-  width: 700px;
+  width: 700px!important;
   padding: 1px 10px 1px 10px;
 }
 

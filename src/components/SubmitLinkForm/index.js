@@ -1,20 +1,20 @@
 import React from "react";
 import "./style.css";
 
+
 const SubmitLinkForm = props => {
   return (
     <form className="resourceForm">
-      
-    <label>
+      <label>
         Paste the title here:
         <br></br>
         <input
-          className='form-control input'
-          id='input1'
+          className="form-control input"
+          id="input1"
           value={props.titleInput}
-          type='text'
-          name='title'
-          placeholder='Example: 15 CSS tricks to make your life easier'
+          type="text"
+          name="title"
+          placeholder="Example: 15 CSS tricks to make your life easier"
           onChange={props.handleInputChange}
         />
       </label>
@@ -24,7 +24,7 @@ const SubmitLinkForm = props => {
         <br></br>
         <input
           className="form-control input"
-          id='input2'
+          id="input2"
           value={props.linkInput}
           type="text"
           name="link"
@@ -33,25 +33,37 @@ const SubmitLinkForm = props => {
         />
       </label>
       <br></br>
-    
-      <select value={props.typeInput} onChange={props.handleInputChange3} className='resourceDropdown'>
-        <option className='optionText'>&nbsp;Type of resource&nbsp;</option>
-        <option value='blog' className='optionText'>&nbsp;Blog post&nbsp;</option>
-        <option value='course' className='optionText'>&nbsp;Course/Tutorial&nbsp;</option>
-        <option value='video' className='optionText'>&nbsp;Video&nbsp;</option>
+
+      <select
+        value={props.typeInput}
+        onChange={props.handleInputChange3}
+        className="resourceDropdown"
+      >
+        <option className="optionText">&nbsp;Type of resource&nbsp;</option>
+        <option value="blog" className="optionText">
+          &nbsp;Blog post&nbsp;
+        </option>
+        <option value="course" className="optionText">
+          &nbsp;Course/Tutorial&nbsp;
+        </option>
+        <option value="video" className="optionText">
+          &nbsp;Video&nbsp;
+        </option>
       </select>
       <br></br>
 
       <button
         type="submit"
         className="submitButton"
-        onClick={event => props.handleFormSubmit(event)
-        }
-      >
+        onClick={(event) => {
+          props.handleFormSubmit(event);
+        }}>
+      
         &nbsp;Add study resource to library&nbsp;
       </button>
     </form>
   );
+  
 };
 
 export default SubmitLinkForm;

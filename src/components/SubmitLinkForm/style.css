@@ -1,46 +1,56 @@
 /* Resource Form styling */
 .resourceForm {
-  max-width: 700px;
-  margin: -20px 0px 0px 40px;
+  width: 100%;
+  margin: -.7em 0em 2em 2em!important;
 }
 
 .input {
-  width: 700px!important;
+  width: 24em!important;
   padding: 1px 10px 1px 10px;
+  font-size: .9em;
+}
+
+.input::placeholder {
+  color: #4d4d4d!important;
+  font-size: .9em;
 }
 
 label {
   color: #4d4d4d;
-  font-size: 20px;
+  font-size: .9em;
 }
 
 /* Styling for resource and submit button */
 .resourceDropdown, .submitButton {
-  height: 50px;
+  height: 2em;
   color: white;
-  font-size: 24px;
+  font-size: .9em;
   background-image: linear-gradient(to right, #7e515e , #bb8796);
-  padding: 6px 12px 6px 12px!important;
+  padding: .3em .8em .5em .8em;
   border: none!important;
-  border-radius: 2px!important;
   transition: all .2s ease-in-out;
 }
 
 /* Hover effects for resource and submit button */
 .resourceDropdown:hover, .submitButton:hover {
   transform: scale(1.05);
+  font-size: .9em;
 }
 
 .resourceDropdown:hover {
   background-color: #7e515e;
+  font-size: .9em;
 }
 
 
 .optionText {
+  background-color: #7e515e;
   color: white;
+  font-size: .9em;
 }
 
 .submitButton {
-  margin: 15px 0px 50px 0px;
+  margin: .5em 0em 0em 0em;
+  font-size: .9em;
 }
 

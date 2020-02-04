@@ -87,7 +87,7 @@ class Home extends Component {
   // Renders content onto main home page
   render() {
     return (
-      <Container fluid className="appContainer">
+      <Container fluid>
         <div className="row">
           <div className="col s5" id="sidebarWidth">
             <Sidebar />

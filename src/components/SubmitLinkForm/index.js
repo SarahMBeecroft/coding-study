@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react';
 import "./style.css";
 
+
+
+
 const SubmitLinkForm = props => {
-  
   return (
+
     <form className="resourceForm">
       <label>
         Paste the title here:
@@ -18,7 +21,7 @@ const SubmitLinkForm = props => {
           onChange={props.handleInputChange}
         />
       </label>
-
+ <br></br>
       <label>
         Paste the link to the study resource below:
         <br></br>
@@ -55,15 +58,21 @@ const SubmitLinkForm = props => {
       <button
         type="submit"
         className="submitButton"
-        onClick={(event) => {
+        onClick={event => {
           props.handleFormSubmit(event);
-        }}>
-      
+          
+        }}
+      >
         &nbsp;Add study resource to library&nbsp;
+        
       </button>
-    </form>
-  );
+ 
   
+    </form>
+    
+  );
 };
 
 export default SubmitLinkForm;
+
+

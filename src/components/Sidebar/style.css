@@ -31,7 +31,15 @@
 
 .menuButtons {
  position: relative;
- top: 1em;
+ top: .8em;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* Adds space in between menu buttons */

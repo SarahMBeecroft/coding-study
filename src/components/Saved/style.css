@@ -1,14 +1,17 @@
 * {
   border-radius: 0px!important;
+  line-height: 1.2em;
 }
 
 .card {
   background-color: white;
-  max-width: 450px;
+}
+
+.cardFormatting {
+  padding: .3em;
 }
 
 .card-body {
-  max-width: 400px;
   display: inline-block;
   text-align: center!important;
 }
@@ -17,15 +20,10 @@
   width: 300px;
 }
 
-h2 {
-  color: #4d4d4d;
-  font-size: 45px;
-  display: inline-block!important;
-}
-
 .linkTitle {
   color: #4d4d4d;
-  font-size: 25px;
+  font-size: .9em;
+  margin-top: .5em;
 }
 
 .deleteLink {
@@ -37,14 +35,14 @@ h2 {
 }
 
 .viewLink, .inProgressBtn {
-  margin-left: 10px;
-  height: 50px;
+  display: inline-block;
+  height: 2em;
+  width: 13.2em;
   color: white;
-  font-size: 24px;
+  font-size: .9em;
   background-image: linear-gradient(to right, #7e515e , #bb8796);
-  padding: 6px 12px 6px 12px!important;
+  padding: .3em .8em .5em .8em;
   border: none!important;
-  border-radius: 2px!important;
   transition: all .2s ease-in-out;
 }
 
@@ -54,6 +52,7 @@ h2 {
 
 .viewLink:hover, .inProgressBtn:hover {
   transform: scale(1.05);
+  font-size: .9em;
 }
 
 img {
@@ -69,7 +68,7 @@ img:hover {
 .deleteImage {
   width: 30px;
   height: 30px;
-  margin: 20px 0px 0px 82px;
+  margin: .8em 0em .2em 5.4em;
   transition: all .2s ease-in-out;
 }
 
@@ -80,12 +79,13 @@ img:hover {
 }
 
 
-/* Grid CSS */
-.grid-container {
-  display: grid!important;
-  grid-gap: 20px!important;  
-  grid-template-columns: 1fr 1fr 1fr 1fr!important;
-  text-align: center!important;
-}
 
+
+/* Media Queries */ 
+
+/* @media only screen and (max-width: 700px) {
+  .cardFormatting {
+    max-width: 300px!important;
+  }
+} */
 

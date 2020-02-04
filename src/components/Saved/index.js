@@ -18,7 +18,7 @@ const DisplayLinks = props => {
       <div className="grid-container">
         {props.savedLinks.map(savedLink => {
           return (
-            <div>
+            <div className="cardFormatting">
               <li className="list-group-item" key={savedLink._id}>
                 <Row id={savedLink.title + "Card"} key={savedLink._id}>
                   <Col size="12" className="linkInfo">
@@ -54,7 +54,7 @@ const DisplayLinks = props => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="viewLink">Go to website</button>
+                    <button className="viewLink">Visit external website</button>
                   </a>
                   <img
                     src={img2}

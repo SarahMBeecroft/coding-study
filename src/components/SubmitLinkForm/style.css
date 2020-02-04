@@ -20,9 +20,12 @@ label {
   font-size: .9em;
 }
 
+
 /* Styling for resource and submit button */
 .resourceDropdown, .submitButton {
   height: 2em;
+  width: 11em;
+  text-align: left!important;
   color: white;
   font-size: .9em;
   background-image: linear-gradient(to right, #7e515e , #bb8796);

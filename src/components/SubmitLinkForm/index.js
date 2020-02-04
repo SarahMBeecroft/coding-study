@@ -63,7 +63,7 @@ const SubmitLinkForm = props => {
           
         }}
       >
-        &nbsp;Add study resource to library&nbsp;
+        &nbsp;Add to library&nbsp;
         
       </button>
  

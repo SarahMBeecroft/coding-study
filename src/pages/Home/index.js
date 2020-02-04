@@ -3,8 +3,8 @@ import { Container } from "../../components/Grid";
 import "./style.css";
 import Sidebar from "../../components/Sidebar";
 import SubmitLinkForm from "../../components/SubmitLinkForm";
-import ViewModal from "../../components/Modal"
 import API from "../../utils/API";
+
 
 class Home extends Component {
   // Creates state
@@ -87,23 +87,23 @@ class Home extends Component {
   // Renders content onto main home page
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="appContainer">
         <div className="row">
           <div className="col s5" id="sidebarWidth">
             <Sidebar />
           </div>
           <div className="col s5">
-            <ViewModal></ViewModal>
             <SubmitLinkForm
               links={this.state.links}
               titles={this.state.titles}
               types={this.state.types}
-              onClick={this.openModal}
               handleInputChange={this.handleInputChange}
               handleInputChange2={this.handleInputChange2}
               handleInputChange3={this.handleInputChange3}
               handleFormSubmit={this.handleFormSubmit}
+              
             />
+     
           </div>
           <div className="col s2">
             {/* <TrackingProgress></TrackingProgress> */}

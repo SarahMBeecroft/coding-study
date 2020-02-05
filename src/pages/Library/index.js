@@ -5,6 +5,7 @@ import "./style.css";
 import API from "../../utils/API";
 import Saved from "../../components/Saved";
 import Navbar from "../../components/Navbar";
+import Pagination from "../../components/Paginate";
 
 class SaveLink extends Component {
   state = {
@@ -34,6 +35,7 @@ class SaveLink extends Component {
               savedLinks={this.state.savedLinks}
               handleDeleteButton={this.handleDeleteButton}
             />
+            <Pagination></Pagination>
           </Wrapper>
         </Container>
       </Container>

@@ -1,0 +1,13 @@
+.topButton {
+  transition: all 0.2s ease-in-out;
+  color: #7e515e!important;
+}
+
+.topButton:hover {
+  transform: scale(1.05);
+}
+
+#centerDiv {
+  text-align: center!important;
+  margin: .8em 0em 2em 0em;
+}

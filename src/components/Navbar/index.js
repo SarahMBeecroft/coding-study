@@ -20,17 +20,17 @@ function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="home">
-                Home
+                Home&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
             <li className="nav-item active">
               <a className="nav-link" href="library" id="activeNav">
-                Library
+                Library&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="inprogress">
-                In Progress
+                In Progress&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
             <li className="nav-item">

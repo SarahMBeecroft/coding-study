@@ -1,7 +1,7 @@
 /* Styles active nav link */
-#activeNav {
+.active {
   color: #7e515e!important;
-  text-decoration: underline;
+  font-weight: 600!important;
   }
   
   .nav-link {

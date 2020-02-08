@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Container } from "../../components/Grid";
 import './style.css';
-import NavbarInProgress from '../../components/NavbarInProgress';
+import Wrapper from "../../components/Wrapper";
 import API from "../../utils/API";
+import Saved from "../../components/Saved";
+import NavbarInProgress from "../../components/NavbarInProgress";
+import TopButtonInProgress from "../../components/TopButtonInProgress";
 
 
 
@@ -27,8 +30,16 @@ class InProgress extends Component {
   render() {
     return (
       <Container fluid>
-        <NavbarInProgress></NavbarInProgress>
-  
+        <Container>
+          <NavbarInProgress></NavbarInProgress>
+          <Wrapper>
+            <Saved
+              savedLinks={this.state.savedLinks}
+              handleDeleteButton={this.handleDeleteButton}
+            />
+            <TopButtonInProgress></TopButtonInProgress>
+          </Wrapper>
+        </Container>
       </Container>
     );
   }

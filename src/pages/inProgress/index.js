@@ -1,30 +1,14 @@
 import React, { Component } from "react";
 import { Container } from "../../components/Grid";
-import './style.css';
+import "./style.css";
 import Wrapper from "../../components/Wrapper";
-import API from "../../utils/API";
-import Saved from "../../components/Saved";
+
 import NavbarInProgress from "../../components/NavbarInProgress";
 import TopButtonInProgress from "../../components/TopButtonInProgress";
 
-
-
-class InProgress extends Component {
+class InProgressPage extends Component {
   state = {
-    savedLinks: []
-  };
-
-  componentDidMount() {
-    API.getLinks()
-
-      .then(res => this.setState({ savedLinks: res.data }))
-      .catch(err => console.log(err));
-  }
-
-  handleDeleteButton = _id => {
-    API.deleteLink(_id)
-      .then(res => this.componentDidMount())
-      .catch(err => console.log(err));
+    inProgressLinks: [],
   };
 
   render() {
@@ -33,10 +17,7 @@ class InProgress extends Component {
         <Container>
           <NavbarInProgress></NavbarInProgress>
           <Wrapper>
-            <Saved
-              savedLinks={this.state.savedLinks}
-              handleDeleteButton={this.handleDeleteButton}
-            />
+   
             <TopButtonInProgress></TopButtonInProgress>
           </Wrapper>
         </Container>
@@ -45,5 +26,4 @@ class InProgress extends Component {
   }
 }
 
-export default InProgress;
-
+export default InProgressPage;

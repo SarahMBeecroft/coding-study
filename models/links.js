@@ -13,6 +13,9 @@ const linkSchema = new Schema({
   },
   studyType: { 
     type: String, required: false 
+  },
+  inProgress: {
+    type: Boolean, required: false
   }
 });
 

@@ -17,7 +17,7 @@ const DisplayLinks = props => {
   ) : (
     <div className="card-body">
       <div className="grid-container">
-        {props.savedLinks.map(savedLink => {
+        {props.savedLinks(savedLink => {
           
           return (
             <div className="cardFormatting">

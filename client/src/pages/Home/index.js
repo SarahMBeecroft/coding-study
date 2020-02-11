@@ -55,7 +55,7 @@ class Home extends Component {
     console.log("Link title: " + savedTitles);
 
     // Saves user input to new variable and trims it
-    let savedLinks = this.state.linkInput.trim();
+    const savedLinks = this.state.linkInput.trim();
     console.log("URL: " + savedLinks);
 
     // Saves user input to new variable and trims it

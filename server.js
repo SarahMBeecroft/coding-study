@@ -25,11 +25,14 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // Connects to Mongo DB
-var mongoDB = "mongodb://localhost/studyapp";
-mongoose.connect(mongoDB, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/studyapp");
+mongoose.connect({
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
+console.log(process.env.MONGODB_URI);
+
 
 // Routes
 // app.use('/users', require('./routes/users'));

@@ -10,9 +10,18 @@ const app = express();
 // Defines middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+
+// Routes
+// app.use('/users', require('./routes/users'));
+app.use(routes);
+
+// Static assets
+if (
+  process.env.NODE_ENV === "production" ||
+  process.env.NODE_ENV === "staging"
+) {
+  app.use(express.static(__dirname + "/client/build"));
+  // If Express doesn't recognize route serve index.html
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
@@ -25,18 +34,15 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // Connects to Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/studyapp");
-mongoose.connect({
+var mongoDB = 'mongodb://localhost/studyapp';
+mongoose.connect(mongoDB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
+
 console.log(process.env.MONGODB_URI);
 
-
-// Routes
-// app.use('/users', require('./routes/users'));
-app.use(routes);
 // console.log(process.env);
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

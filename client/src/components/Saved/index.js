@@ -5,8 +5,8 @@ import img1 from "../../images/course.jpg";
 import img2 from "../../images/garbagecan.png";
 
 
-const DisplayLinks = props => {
-  return props.savedLinks.length === 0 ? (    
+const DisplayLinks =  (props, inProgressLinks)=> {
+  return props.savedLinks.length === 0 ? (
     <div className="card">
       <div className="card-body player">
         <div className="article">
@@ -18,7 +18,6 @@ const DisplayLinks = props => {
     <div className="card-body">
       <div className="grid-container">
         {props.savedLinks.map(savedLink => {
-          
           return (
             <div className="cardFormatting">
               <li className="list-group-item" key={savedLink._id}>
@@ -42,15 +41,14 @@ const DisplayLinks = props => {
                     </Row>
                   </Col>
                 </Row>
-           
+
                 <Row>
-                  
                   <button
                     className="inProgressBtn"
-                    id={savedLink._id}
-                    onClick={() => props.handleDeleteButton(savedLink._id)}
+                    id={inProgressLinks.link}
+                    onClick={event => props.handleinProgressButton(event)}
                   >
-                    Add to your "In Progress"
+                    Add to your "In Progress
                   </button>
 
                   <a

@@ -1,5 +1,5 @@
 * {
-  font-family: 'Sulphur Point', sans-serif!important;
+  font-family: 'Sulphur Point', sans-serif !important;
   color: #4d4d4d;
   font-size: 25px;
   word-spacing: -3px; /* Decreases space between words */
@@ -13,7 +13,7 @@ a:hover {
 /* Jumbotron styling */
 .jumbotron {
   border-radius: 0 !important;
-  text-align: center!important;
+  text-align: center !important;
   border-bottom: 1px solid #7e515e;
   overflow-x: hidden;
 }
@@ -23,7 +23,5 @@ a:hover {
   padding-left: 0;
   padding-right: 0;
 }
-
-
 
 /* Footer Styling */

@@ -1,59 +1,60 @@
 /* Resource Form styling */
 .resourceForm {
   width: 100%;
-  margin: -.7em 0em 2em 2em!important;
+  margin: -0.7em 0em 2em 2em !important;
 }
 
 .input {
-  width: 24em!important;
-  padding: 1px 10px 1px 10px;
-  font-size: .9em;
+  width: 28em !important;
+  padding: 1em !important;
+  font-size: 0.9em;
+  margin-bottom: 0.2em !important;
 }
 
 .input::placeholder {
-  color: #4d4d4d!important;
-  font-size: .9em;
+  color: #4d4d4d !important;
+  font-size: 0.9em;
 }
 
 label {
   color: #4d4d4d;
-  font-size: .9em;
+  font-size: 0.9em;
+  margin-top: 0.4em;
 }
 
-
 /* Styling for resource and submit button */
-.resourceDropdown, .submitButton {
+.resourceDropdown,
+.submitButton {
   height: 2em;
   width: 11em;
-  text-align: left!important;
+  text-align: left !important;
   color: white;
-  font-size: .9em;
-  background-image: linear-gradient(to right, #7e515e , #bb8796);
-  padding: .3em .8em .5em .8em;
-  border: none!important;
-  transition: all .2s ease-in-out;
+  font-size: 0.9em;
+  background-image: linear-gradient(to right, #7e515e, #bb8796);
+  padding: 0.3em 0.8em 0.5em 0.8em;
+  border: none !important;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Hover effects for resource and submit button */
-.resourceDropdown:hover, .submitButton:hover {
+.resourceDropdown:hover,
+.submitButton:hover {
   transform: scale(1.05);
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .resourceDropdown:hover {
   background-color: #7e515e;
-  font-size: .9em;
+  font-size: 0.9em;
 }
-
 
 .optionText {
   background-color: #7e515e;
   color: white;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .submitButton {
-  margin: .5em 0em 0em 0em;
-  font-size: .9em;
+  margin: 0.5em 0em 0em 0em;
+  font-size: 0.9em;
 }
-

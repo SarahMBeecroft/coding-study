@@ -89,23 +89,19 @@ class Home extends Component {
     return (
       <Container fluid>
         <div className='row'>
-          <div className='col s5' id='sidebarWidth'>
+          <div className='col s6' id='sidebarWidth'>
             <Sidebar />
           </div>
-          <div className='col s5'>
+          <div className='col s6'>
             <SubmitLinkForm
               links={this.state.links}
               titles={this.state.titles}
               types={this.state.types}
-              inProgress={this.state.inProgress}
               handleInputChange={this.handleInputChange}
               handleInputChange2={this.handleInputChange2}
               handleInputChange3={this.handleInputChange3}
               handleFormSubmit={this.handleFormSubmit}
             />
-          </div>
-          <div className='col s2'>
-            {/* <TrackingProgress></TrackingProgress> */}
           </div>
         </div>
 

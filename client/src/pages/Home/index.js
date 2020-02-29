@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from '../../components/Grid';
 import './style.css';
 import Sidebar from '../../components/Sidebar';
+import Search from '../../components/SearchBar';
 import SubmitLinkForm from '../../components/SubmitLinkForm';
 import API from '../../utils/API';
 
@@ -91,6 +92,7 @@ class Home extends Component {
         <div className='row'>
           <div className='col s6' id='sidebarWidth'>
             <Sidebar />
+            <Search />
           </div>
           <div className='col s6'>
             <SubmitLinkForm

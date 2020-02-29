@@ -1,30 +1,34 @@
-/* Resource Form styling */
-.resourceForm {
-  width: 100%;
-  margin: -0.7em 0em 2em 2em !important;
+/* Search Form styling */
+.searchForm {
+  max-width: 16em !important;
 }
 
-.input {
-  width: 28em !important;
-  padding: 1em !important;
+.search-form-control {
+  width: 16em !important;
+}
+
+.searchInput {
+  padding: 0.5em !important;
   font-size: 0.9em;
   margin-bottom: 0.2em !important;
 }
 
-.input::placeholder {
+.searchInput::placeholder {
   color: #4d4d4d !important;
   font-size: 0.8em;
 }
 
-label {
+.searchLabel {
+  width: 16em;
   color: #4d4d4d;
   font-size: 0.9em;
-  margin-top: 0.4em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  word-spacing: -0.2em;
 }
 
-/* Styling for resource and submit button */
-.resourceDropdown,
-.submitButton {
+/* Styling for search button */
+.searchButton {
   height: 2em;
   width: 11em;
   text-align: left !important;
@@ -34,17 +38,13 @@ label {
   padding: 0.3em 0.8em 0.5em 0.8em;
   border: none !important;
   transition: all 0.2s ease-in-out;
+  margin-top: 0.4em;
+  margin-bottom: 1em !important;
 }
 
-/* Hover effects for resource and submit button */
-.resourceDropdown:hover,
-.submitButton:hover {
+/* Hover effects for search button */
+.searchButton:hover {
   transform: scale(1.05);
-  font-size: 0.9em;
-}
-
-.resourceDropdown:hover {
-  background-color: #7e515e;
   font-size: 0.9em;
 }
 
@@ -54,7 +54,7 @@ label {
   font-size: 0.9em;
 }
 
-.submitButton {
-  margin: 0.5em 0em 0em 0em;
+.searchButton {
   font-size: 0.9em;
+  width: 5.5em;
 }

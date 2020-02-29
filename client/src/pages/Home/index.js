@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Container } from "../../components/Grid";
-import "./style.css";
-import Sidebar from "../../components/Sidebar";
-import SubmitLinkForm from "../../components/SubmitLinkForm";
-import API from "../../utils/API";
+import React, { Component } from 'react';
+import { Container } from '../../components/Grid';
+import './style.css';
+import Sidebar from '../../components/Sidebar';
+import SubmitLinkForm from '../../components/SubmitLinkForm';
+import API from '../../utils/API';
 
 class Home extends Component {
   // Creates state
@@ -11,11 +11,11 @@ class Home extends Component {
     links: [],
     titles: [],
     types: [],
-    error: "",
-    message: "",
-    linkInput: "",
-    titleInput: "",
-    typeInput: ""
+    error: '',
+    message: '',
+    linkInput: '',
+    titleInput: '',
+    typeInput: ''
   };
 
   // Takes value from user input for title
@@ -42,25 +42,25 @@ class Home extends Component {
     event.preventDefault();
 
     // Sets state of links to user input
-    this.setState({ links: event.target.value, error: "" });
+    this.setState({ links: event.target.value, error: '' });
 
     // Sets state of titles to user input
-    this.setState({ titles: event.target.value, error: "" });
+    this.setState({ titles: event.target.value, error: '' });
 
     // Sets state of types to user selection
-    this.setState({ types: event.target.value, error: "" });
+    this.setState({ types: event.target.value, error: '' });
 
     // Saves user input to new variable and trims it
     let savedTitles = this.state.titleInput.trim();
-    console.log("Link title: " + savedTitles);
+    console.log('Link title: ' + savedTitles);
 
     // Saves user input to new variable and trims it
     let savedLinks = this.state.linkInput.trim();
-    console.log("URL: " + savedLinks);
+    console.log('URL: ' + savedLinks);
 
     // Saves user input to new variable and trims it
     let savedTypes = this.state.typeInput;
-    console.log("Type of resource: " + savedTypes);
+    console.log('Type of resource: ' + savedTypes);
 
     // Saves link to new object variable for database config
     savedLinks = {
@@ -74,25 +74,25 @@ class Home extends Component {
     API.saveLink(savedLinks)
       .then(
         this.setState({
-          message: alert("Link saved to database!")
+          message: alert('Link saved to database!')
         })
       )
       .catch(err => console.log(err));
 
     // Clears search form fields after hitting submit
-    document.getElementById("input1").value = "";
-    document.getElementById("input2").value = "";
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
   };
 
   // Renders content onto main home page
   render() {
     return (
       <Container fluid>
-        <div className="row">
-          <div className="col s5" id="sidebarWidth">
+        <div className='row'>
+          <div className='col s5' id='sidebarWidth'>
             <Sidebar />
           </div>
-          <div className="col s5">
+          <div className='col s5'>
             <SubmitLinkForm
               links={this.state.links}
               titles={this.state.titles}
@@ -104,13 +104,13 @@ class Home extends Component {
               handleFormSubmit={this.handleFormSubmit}
             />
           </div>
-          <div className="col s2">
+          <div className='col s2'>
             {/* <TrackingProgress></TrackingProgress> */}
           </div>
         </div>
 
-        <div className="row">
-          <div className="col s12" id="paddingRemover"></div>
+        <div className='row'>
+          <div className='col s12' id='paddingRemover'></div>
         </div>
       </Container>
     );

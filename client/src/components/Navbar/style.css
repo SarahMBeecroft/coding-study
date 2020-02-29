@@ -1,11 +1,11 @@
 /* Styles active nav link */
 #activeNav {
-color: #7e515e!important;
-text-decoration: underline;
+  color: #7e515e !important;
+  text-decoration: underline;
 }
 
 .nav-link {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-item:hover {
@@ -13,10 +13,10 @@ text-decoration: underline;
 }
 
 #centerNav {
-  text-align: center!important;
+  text-align: center !important;
 }
 
 nav {
-  display: inline-block!important;
+  display: inline-block !important;
   margin: -10px 0px -10px 0px;
 }

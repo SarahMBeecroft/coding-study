@@ -12,6 +12,23 @@ import NotFound from './pages/NotFound';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// class App extends Component {
+//   componentDidMount() {
+//     const script = document.createElement('script');
+//     script.async = true;
+//     script.src = 'https://some-scripturl.js';
+//     this.div.appendChild(script);
+//   }
+//   render() {
+//     return (
+//       <div className='App' ref={el => (this.div = el)}>
+//         <h1>Hello react</h1>
+//         {/* Script is inserted here */}
+//       </div>
+//     );
+//   }
+// }
+
 function App() {
   return (
     <Router>

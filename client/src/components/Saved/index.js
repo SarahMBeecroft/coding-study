@@ -7,18 +7,17 @@ import img2 from '../../images/garbagecan.png';
 const DisplayLinks = (props, inProgressLinks) => {
   return props.savedLinks.length === 0 ? (
     <div className='card'>
-      <div className='card-body player'>
-        <div className='article'>
-          <h3>Saved Links:</h3>
-        </div>
+      <div className='card-body'>
+        <h3>Saved Links:</h3>
+
       </div>
     </div>
   ) : (
-    <div className='card-body'>
-      <div className='grid-container'>
-        {props.savedLinks.map(savedLink => {
-          return (
-            <div className='cardFormatting'>
+      <div className='card-body'>
+        <div className='grid-container'>
+          {props.savedLinks.map(savedLink => {
+            return (
+
               <li className='list-group-item' key={savedLink._id}>
                 <Row id={savedLink.title + 'Card'} key={savedLink._id}>
                   <Col size='12' className='linkInfo'>
@@ -66,12 +65,12 @@ const DisplayLinks = (props, inProgressLinks) => {
                   />
                 </Row>
               </li>
-            </div>
-          );
-        })}
+
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default DisplayLinks;

@@ -1,9 +1,0 @@
-.wrapper {
-  padding-top: .5em;
-  flex-flow: row wrap;
-  padding: 1em;
-  justify-content: space-around;
-  align-content: flex-start;
-  overflow: hidden;
-  margin-bottom: 2em;
-}

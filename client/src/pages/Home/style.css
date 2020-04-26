@@ -14,7 +14,6 @@ a:hover {
 .jumbotron {
   border-radius: 0 !important;
   text-align: center !important;
-  border-bottom: 1px solid #7e515e;
   overflow-x: hidden;
 }
 

@@ -9,6 +9,7 @@ import API from '../../utils/API';
 class Home extends Component {
   // Creates state
   state = {
+    search: '',
     links: [],
     titles: [],
     types: [],
@@ -17,6 +18,12 @@ class Home extends Component {
     linkInput: '',
     titleInput: '',
     typeInput: ''
+  };
+
+  // Takes value from user input for search form
+  handleSearchInputChange = event => {
+    // Sets input state to whatever user typed in search field
+    this.setState({ search: event.target.value });
   };
 
   // Takes value from user input for title
@@ -37,7 +44,48 @@ class Home extends Component {
     this.setState({ typeInput: event.target.value });
   };
 
-  // Function to handle form submit
+  //=======================================
+  // Function to handle search form submit
+  //=======================================
+  handleSearchFormSubmit = event => {
+    // Prevents page from reloading
+    event.preventDefault();
+    // Connects to Google API with search value
+    API.searchResource(this.state.search)
+      .then(res => {
+        if (res.data.items === 'error') {
+          throw new Error(res.data.items);
+        } else {
+          // Stores responses in array
+          let results = res.data.items;
+          // Maps through the array
+          console.log(results);
+
+          results = results.map(result => {
+            // Stores resource data in new object
+            result = {
+              // key: result.id,
+              // id: result.id,
+              // title: result.volumeInfo.title,
+              // authors: result.volumeInfo.authors,
+              // description: result.volumeInfo.description,
+              // image: result.volumeInfo.imageLinks.thumbnail,
+              // link: result.volumeInfo.infoLink
+            };
+            console.log(result);
+
+            return result;
+          });
+          // Sets empty link array to new array of objects
+          this.setState({ links: results, error: '' });
+        }
+      })
+      .catch(err => this.setState({ error: err.items }));
+  };
+
+  //=============================================================
+  // Function to handle form submit for user adding own resource
+  //=============================================================
   handleFormSubmit = event => {
     // Prevents page from reloading
     event.preventDefault();
@@ -85,7 +133,9 @@ class Home extends Component {
     document.getElementById('input2').value = '';
   };
 
+  //=====================================
   // Renders content onto main home page
+  //=====================================
   render() {
     return (
       <Container fluid>

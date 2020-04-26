@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container } from '../../components/Grid';
-import Wrapper from '../../components/Wrapper';
 import './style.css';
 import API from '../../utils/API';
 import Saved from '../../components/Saved';
@@ -27,17 +26,16 @@ class SaveLink extends Component {
   render() {
     return (
       <Container fluid>
-        <Container>
-          <Navbar></Navbar>
-          <Wrapper>
-            <Saved
-              savedLinks={this.state.savedLinks}
-              handleDeleteButton={this.handleDeleteButton}
-              links={this.state.links}
-            />
-            <TopButton></TopButton>
-          </Wrapper>
-        </Container>
+        <Navbar></Navbar>
+
+        <Saved
+          savedLinks={this.state.savedLinks}
+          handleDeleteButton={this.handleDeleteButton}
+          links={this.state.links}
+        />
+        <TopButton></TopButton>
+
+
       </Container>
     );
   }

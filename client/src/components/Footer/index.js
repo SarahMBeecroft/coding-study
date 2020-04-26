@@ -8,7 +8,7 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <p className="footerText">©2020 Sarah Beecroft</p>
+              <p className="footerText">©2020 Made with love by Sarah Beecroft</p>
             </div>
           </div>
         </div>

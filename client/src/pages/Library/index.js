@@ -27,15 +27,12 @@ class SaveLink extends Component {
     return (
       <Container fluid>
         <Navbar></Navbar>
-
         <Saved
           savedLinks={this.state.savedLinks}
           handleDeleteButton={this.handleDeleteButton}
           links={this.state.links}
         />
         <TopButton></TopButton>
-
-
       </Container>
     );
   }

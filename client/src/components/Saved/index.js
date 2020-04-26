@@ -7,68 +7,66 @@ import img2 from '../../images/garbagecan.png';
 const DisplayLinks = (props, inProgressLinks) => {
   return props.savedLinks.length === 0 ? (
     <div className='card'>
-      <div className='card-body'>
+      <div className='cards-list'>
         <h3>Saved Links:</h3>
 
       </div>
     </div>
   ) : (
-      <div className='card-body'>
-        <div className='grid-container'>
-          {props.savedLinks.map(savedLink => {
-            return (
+      <div className='cards-list'>
+        {props.savedLinks.map(savedLink => {
+          return (
 
-              <li className='list-group-item' key={savedLink._id}>
-                <Row id={savedLink.title + 'Card'} key={savedLink._id}>
-                  <Col size='12' className='linkInfo'>
-                    <Row>
-                      <a
-                        href={savedLink.link}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        <img
-                          className='savedImage'
-                          src={img1}
-                          alt={'person studying'}
-                        />
-                      </a>
-                    </Row>
-                    <Row>
-                      <p className='linkTitle'>{savedLink.title}</p>
-                    </Row>
-                  </Col>
-                </Row>
+            <li className='card' key={savedLink._id}>
+              <Row id={savedLink.title + 'Card'} key={savedLink._id}>
+                <Col size='12' className='linkInfo'>
+                  <Row>
+                    <a
+                      href={savedLink.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <img
+                        className='savedImage'
+                        src={img1}
+                        alt={'person studying'}
+                      />
+                    </a>
+                  </Row>
+                  <Row>
+                    <p className='linkTitle'>{savedLink.title}</p>
+                  </Row>
+                </Col>
+              </Row>
 
-                <Row>
-                  <button
-                    className='inProgressBtn'
-                    id={inProgressLinks.link}
-                    onClick={event => props.handleinProgressButton(event)}
-                  >
-                    Add to your "In Progress
+              <Row>
+                <button
+                  className='inProgressBtn'
+                  id={inProgressLinks.link}
+                  onClick={event => props.handleinProgressButton(event)}
+                >
+                  Add to your "In Progress
                   </button>
 
-                  <a
-                    href={savedLink.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <button className='viewLink'>Visit external website</button>
-                  </a>
-                  <img
-                    src={img2}
-                    alt={'delete'}
-                    id={savedLink._id}
-                    onClick={() => props.handleDeleteButton(savedLink._id)}
-                    className='deleteImage'
-                  />
-                </Row>
-              </li>
+                <a
+                  href={savedLink.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <button className='viewLink'>Visit external website</button>
+                </a>
+                <img
+                  src={img2}
+                  alt={'delete'}
+                  id={savedLink._id}
+                  onClick={() => props.handleDeleteButton(savedLink._id)}
+                  className='deleteImage'
+                />
+              </Row>
+            </li>
 
-            );
-          })}
-        </div>
+          );
+        })}
       </div>
     );
 };

@@ -22,6 +22,79 @@ label {
   margin-top: 0.4em;
 }
 
+
+.button {
+	display: block;
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 24px;
+	font-weight: normal;
+	box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+}
+
+.instagram {
+	text-align: center;
+	border-radius: 50px;
+  padding: 26px;
+  color: white;
+  background: #BD3381;
+  transition: all 0.2s ease-out 0s;
+}
+
+.gradient {
+	display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: auto;
+  margin: auto;
+  z-index: -1;
+  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
+  transition: all 0s ease-out 0s;
+	transform: translatex(-140px);
+	animation: 18s linear 0s infinite move;
+}
+
+@keyframes move {
+	0% {
+		transform: translatex(-140px);
+	}
+	25% {
+		transform: translatex(140px);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translatex(140px);
+		opacity: 1;
+		background: radial-gradient(90px circle at bottom center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+	75% {
+		transform: translatex(-140px);
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translatex(-140px);
+		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
+	}
+}
+
+
+
+
+
+
+
+
 /* Styling for resource and submit button */
 .resourceDropdown,
 .submitButton {
@@ -30,21 +103,22 @@ label {
   text-align: left !important;
   color: white;
   font-size: 0.9em;
-  background-image: linear-gradient(to right, #7e515e, #bb8796);
-  padding: 0.3em 0.8em 0.5em 0.8em;
-  border: none !important;
+  background-image: linear-gradient(to right, #924c60, #a76880);
+  padding: 0.4em 0.9em 0.3em 0.8em;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 10%;
 }
 
 /* Hover effects for resource and submit button */
 .resourceDropdown:hover,
 .submitButton:hover {
-  transform: scale(1.05);
   font-size: 0.9em;
+  background-image: linear-gradient(to right, #a76880, #924c60);
 }
 
 .resourceDropdown:hover {
-  background-color: #7e515e;
+  background-color: #813e51;
   font-size: 0.9em;
 }
 

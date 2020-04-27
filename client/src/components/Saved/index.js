@@ -29,7 +29,7 @@ const DisplayLinks = (props, inProgressLinks) => {
                       <img
                         className='savedImage'
                         src={img1}
-                        alt={'person studying'}
+                        alt={'computer study setup'}
                       />
                     </a>
                   </Row>

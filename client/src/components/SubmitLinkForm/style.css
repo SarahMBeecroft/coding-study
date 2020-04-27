@@ -88,33 +88,28 @@ label {
 	}
 }
 
-
-
-
-
-
-
-
 /* Styling for resource and submit button */
 .resourceDropdown,
 .submitButton {
-  height: 2em;
-  width: 11em;
-  text-align: left !important;
-  color: white;
-  font-size: 0.9em;
   background-image: linear-gradient(to right, #924c60, #a76880);
-  padding: 0.4em 0.9em 0.3em 0.8em;
-  transition: all 0.2s ease-in-out;
+  border: none;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .8em!important;
   cursor: pointer;
-  border-radius: 10%;
+  height: 60px;
+  margin: auto;
 }
 
 /* Hover effects for resource and submit button */
 .resourceDropdown:hover,
 .submitButton:hover {
-  font-size: 0.9em;
-  background-image: linear-gradient(to right, #a76880, #924c60);
+  opacity: 0.9;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+  transform: scale(1.05);
 }
 
 .resourceDropdown:hover {

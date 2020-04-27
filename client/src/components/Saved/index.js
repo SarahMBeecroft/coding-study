@@ -45,7 +45,7 @@ const DisplayLinks = (props, inProgressLinks) => {
                   id={inProgressLinks.link}
                   onClick={event => props.handleinProgressButton(event)}
                 >
-                  Add to your "In Progress
+                  Add to In Progress
                   </button>
 
                 <a
@@ -53,7 +53,7 @@ const DisplayLinks = (props, inProgressLinks) => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <button className='viewLink'>Visit external website</button>
+                  <button className='viewLink'>Visit Website</button>
                 </a>
                 <img
                   src={img2}
